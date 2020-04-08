@@ -444,7 +444,7 @@ TEAM_212THWAX = DarkRP.createJob("212th Waxer", {
     vote = false,
     hasLicense = false,
     candemote = false,
-    category = "212th Attack Battalion",
+    category = "212th Attack Battalion",p
     PlayerSpawn = function(ply)
         ply:SetMaxHealth(400)
         ply:SetHealth(400)
