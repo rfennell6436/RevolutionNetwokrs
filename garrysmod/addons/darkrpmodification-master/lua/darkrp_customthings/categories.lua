@@ -49,15 +49,6 @@ DarkRP.createCategory{
 }
 
 DarkRP.createCategory{
-    name = "212th Attack Battalion",
-    categorises = "jobs",
-    startExpanded = false,
-    color = Color(207, 117, 0, 255),
-    canSee = function(ply) return true end,
-    sortOrder = 4,
-}
-
-DarkRP.createCategory{
     name = "327th Star Corps",
     categorises = "jobs",
     startExpanded = false,
@@ -94,15 +85,6 @@ DarkRP.createCategory{
 }
 
 DarkRP.createCategory{
-    name = "Galactic Marines",
-    categorises = "jobs",
-    startExpanded = false,
-    color = Color(70, 0, 156, 255),
-    canSee = function(ply) return true end,
-    sortOrder = 9,
-}
-
-DarkRP.createCategory{
     name = "Rancor Battalion",
     categorises = "jobs",
     startExpanded = false,
@@ -121,21 +103,30 @@ DarkRP.createCategory{
 }
 
 DarkRP.createCategory{
+    name = "Omega Squad",
+    categorises = "jobs",
+    startExpanded = false,
+    color = Color(112, 106, 106, 255),
+    canSee = function(ply) return true end,
+    sortOrder = 12,
+}
+
+DarkRP.createCategory{
     name = "Naval / Base Ops",
     categorises = "jobs",
     startExpanded = false,
     color = Color(168, 168, 168, 255),
     canSee = function(ply) return true end,
-    sortOrder = 12,
+    sortOrder = 13,
 }
 
 DarkRP.createCategory{
     name = "Jedi",
     categorises = "jobs",
     startExpanded = false,
-    color = Color(0, 255, 54, 255),
+    color = Color(110, 191, 237, 255),
     canSee = function(ply) return true end,
-    sortOrder = 13,
+    sortOrder = 14,
 }
 
 DarkRP.createCategory{
@@ -144,7 +135,7 @@ DarkRP.createCategory{
     startExpanded = false,
     color = Color(104, 62, 255, 255),
     canSee = function(ply) return true end,
-    sortOrder = 14,
+    sortOrder = 15,
 }
 
 DarkRP.createCategory{

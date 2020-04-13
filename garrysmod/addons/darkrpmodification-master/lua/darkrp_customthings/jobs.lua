@@ -66,6 +66,54 @@ TEAM_CLONETROOPER = DarkRP.createJob("Clone Trooper", {
     end
 })
 
+TEAM_CLONETRNOVR = DarkRP.createJob("Clone Trainer Overseer", {
+    color = Color(255, 255, 255, 255),
+    model = {
+        "models/officer/highinstructor/highinstructor.mdl"
+    },
+    description = [[A Clone Trainer in the GAR]],
+    weapons = {"rw_sw_dc15a","rw_sw_dc15s"},
+    command = "ctovr",
+    max = 1,
+    salary = 50,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+
+    category = "Clone Troopers",
+    sortOrder = 1,
+
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(400)
+        ply:SetHealth(250)
+        ply:SetArmor(100)
+    end
+})
+
+TEAM_CLONETRN = DarkRP.createJob("Clone Trainer", {
+    color = Color(255, 255, 255, 255),
+    model = {
+        "models/officer/instructor/instructor.mdl"
+    },
+    description = [[A Clone Trainer in the GAR]],
+    weapons = {"rw_sw_dc15a","rw_sw_dc15s"},
+    command = "cttrn",
+    max = 0,
+    salary = 50,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+
+    category = "Clone Troopers",
+    sortOrder = 1,
+
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(400)
+        ply:SetHealth(250)
+        ply:SetArmor(100)
+    end
+})
+
 -- 501st
 
 TEAM_501STCMD = DarkRP.createJob("501st Captain Rex ", {
@@ -88,12 +136,12 @@ TEAM_501STCMD = DarkRP.createJob("501st Captain Rex ", {
     end
 })
 
-TEAM_501STOFF = DarkRP.createJob("501st Officer ", {
+TEAM_501STCD = DarkRP.createJob("501st Combat Driver", {
     color = Color(0, 26, 255, 255),
-    model = {"models/suno_herm/501st/officer/officer.mdl"},
+    model = {"models/suno_herm/501st/barc/barc.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17"},
-    command = "501stoff",
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "alydus_fusioncutter"},
+    command = "501stcd",
     max = 0,
     salary = 100,
     admin = 0,
@@ -212,7 +260,7 @@ TEAM_501STARC = DarkRP.createJob("501st ARC Trooper", {
     color = Color(0, 26, 255, 255),
     model = {"models/suno_herm/501st/arc/arc.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_westarm5"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dual_dc17", "rw_sw_westarm5"},
     command = "501starc",
     max = 0,
     salary = 100,
@@ -232,7 +280,7 @@ TEAM_501STARF = DarkRP.createJob("501st ARF Trooper", {
     color = Color(0, 26, 255, 255),
     model = {"models/suno_herm/501st/arf/arf.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_dc15x", "rw_sw_bino_dark", "rw_sw_dc15x"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_dc15x", "rw_sw_bino_dark", "realistic_hook"},
     command = "501starf",
     max = 0,
     salary = 100,
@@ -248,215 +296,11 @@ TEAM_501STARF = DarkRP.createJob("501st ARF Trooper", {
     end
 })
 
-
-
--- 212th
-
-TEAM_212THCMD = DarkRP.createJob("212th Commander Cody", {
-    color = Color(255, 153, 0, 255),
-    model = {"models/player/suno/212th/cody/cody.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dual_dc17"},
-    command = "212thcmd",
-    max = 1,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "212th Attack Battalion",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_212THOFF = DarkRP.createJob("212th Officer ", {
-    color = Color(255, 153, 0, 255),
-    model = {"models/player/suno/212th/officer/officer.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17"},
-    command = "212thoff",
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "212th Attack Battalion",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_212THNCO = DarkRP.createJob("212th NCO", {
-    color = Color(255, 153, 0, 255),
-    model = {"models/player/suno/212th/sergeant/sergeant.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17"},
-    command = "212thnco",
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "212th Attack Battalion",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_212THTRP = DarkRP.createJob("212th Trooper", {
-    color = Color(255, 153, 0, 255),
-    model = {"models/player/suno/212th/212trooper/212trooper.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17"},
-    command = "212thtrp",
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "212th Attack Battalion",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_212THMED = DarkRP.createJob("212th Medical Trooper", {
-    color = Color(255, 153, 0, 255),
-    model = {"models/player/suno/212th/medictrooper/medictrooper.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_nade_bacta", "weapon_bactainjector", "admin_defib"},
-    command = "212thmed",
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "212th Attack Battalion",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_212THHVY = DarkRP.createJob("212th Heavy Trooper", {
-    color = Color(255, 153, 0, 255),
-    model = {"models/player/suno/212th/heavytrooper/heavytrooper.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "alydus_fortificationbuildertablet", "rw_sw_z6"},
-    command = "212thhvy",
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "212th Attack Battalion",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(500)
-        ply:SetHealth(500)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_212THPLT = DarkRP.createJob("212th Piloting Trooper", {
-    color = Color(255, 153, 0, 255),
-    model = {"models/player/suno/212th/pilot/pilot.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "alydus_fusioncutter"},
-    command = "212thplt",
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "212th Attack Battalion",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_212THARF = DarkRP.createJob("212th ARF Trooper", {
-    color = Color(255, 153, 0, 255),
-    model = {"models/player/suno/212th/arftrooper/arftrooper.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_dc15x", "rw_sw_bino_dark", "rw_sw_dc15x"},
-    command = "212tharf",
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "212th Attack Battalion",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_212THBOIL = DarkRP.createJob("212th Boil ", {
-    color = Color(255, 153, 0, 255),
-    model = {"models/player/suno/212th/boil/boil.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17"},
-    command = "212thboil",
-    max = 1,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "212th Attack Battalion",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_212THWAX = DarkRP.createJob("212th Waxer", {
-    color = Color(255, 153, 0, 255),
-    model = {"models/player/suno/212th/waxer/waxer.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17"},
-    command = "212thwaxer",
-    max = 1,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "212th Attack Battalion",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
 --327th Star Corps
 
 TEAM_327THCMD = DarkRP.createJob("327th Commander Bly", {
     color = Color(252, 255, 0, 255),
-    model = {"models/327th/bly/bly.mdl"},
+    model = {"models/solace/327th/cmd_bly/cmd_bly.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
     weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dual_dc17"},
     command = "327thcmd",
@@ -474,12 +318,12 @@ TEAM_327THCMD = DarkRP.createJob("327th Commander Bly", {
     end
 })
 
-TEAM_327THOFF = DarkRP.createJob("327th Officer ", {
+TEAM_327TH12 = DarkRP.createJob("327th K-Company Twelve", {
     color = Color(252, 255, 0, 255),
-    model = {"models/327th/lowofficer/officer.mdl"},
+    model = {"models/solace/327th/twelve/twelve.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17"},
-    command = "327thoff",
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dual_dc17"},
+    command = "327th12",
     max = 0,
     salary = 100,
     admin = 0,
@@ -494,12 +338,12 @@ TEAM_327THOFF = DarkRP.createJob("327th Officer ", {
     end
 })
 
-TEAM_327THNCO = DarkRP.createJob("327th NCO", {
+TEAM_327THHVY = DarkRP.createJob("327th Heavy Trooper", {
     color = Color(252, 255, 0, 255),
-    model = {"models/327th/sgt/sgt.mdl"},
+    model = {"models/solace/327th/heavy/heavy.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17"},
-    command = "327thnco",
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "alydus_fortificationbuildertablet", "rw_sw_z6"},
+    command = "327thhvy",
     max = 0,
     salary = 100,
     admin = 0,
@@ -516,7 +360,7 @@ TEAM_327THNCO = DarkRP.createJob("327th NCO", {
 
 TEAM_327THTRP = DarkRP.createJob("327th Trooper", {
     color = Color(252, 255, 0, 255),
-    model = {"models/327th/trooper/trooper.mdl"},
+    model = {"models/solace/327th/sergeant/sergeant.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
     weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17"},
     command = "327thtrp",
@@ -536,7 +380,7 @@ TEAM_327THTRP = DarkRP.createJob("327th Trooper", {
 
 TEAM_327THMED = DarkRP.createJob("327th Medical Trooper", {
     color = Color(252, 255, 0, 255),
-    model = {"models/327th/medic/medic.mdl"},
+    model = {"models/solace/327th/medic/medic.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
     weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "weapon_bactainjector", "rw_sw_nade_bacta", "admin_defib"},
     command = "327thmed",
@@ -556,7 +400,7 @@ TEAM_327THMED = DarkRP.createJob("327th Medical Trooper", {
 
 TEAM_327THPLT = DarkRP.createJob("327th Piloting Trooper", {
     color = Color(252, 255, 0, 255),
-    model = {"models/327th/pilot/pilot.mdl"},
+    model = {"models/solace/327th/pilot/pilot.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
     weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "alydus_fusioncutter"},
     command = "327thplt",
@@ -576,9 +420,9 @@ TEAM_327THPLT = DarkRP.createJob("327th Piloting Trooper", {
 
 TEAM_327THARF = DarkRP.createJob("327th ARF Trooper", {
     color = Color(252, 255, 0, 255),
-    model = {"models/327th/arf/arf.mdl"},
+    model = {"models/solace/327th/arf/arf.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_dc15x", "rw_sw_bino_dark", "rw_sw_dc15x"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_dc15x", "rw_sw_bino_dark", "realistic_hook"},
     command = "327tharf",
     max = 0,
     salary = 100,
@@ -594,13 +438,13 @@ TEAM_327THARF = DarkRP.createJob("327th ARF Trooper", {
     end
 })
 
-TEAM_327TT13 = DarkRP.createJob("327th T-13", {
+TEAM_327THARC = DarkRP.createJob("327th ARC Trooper", {
     color = Color(252, 255, 0, 255),
-    model = {"models/327th/t3/t13.mdl"},
+    model = {"models/solace/327th/arc/arc.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "alydus_fusioncutter"},
-    command = "327tht13",
-    max = 1,
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dual_dc17", "cards_westarm5"},
+    command = "327tharc",
+    max = 0,
     salary = 100,
     admin = 0,
     vote = false,
@@ -614,9 +458,29 @@ TEAM_327TT13 = DarkRP.createJob("327th T-13", {
     end
 })
 
-TEAM_327TDEVISS = DarkRP.createJob("327th Deviss", {
+TEAM_327THCD = DarkRP.createJob("327th Combat Driver", {
     color = Color(252, 255, 0, 255),
-    model = {"models/327th/deviss/deviss.mdl"},
+    model = {"models/solace/327th/barc/barc.mdl"},
+    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "alydus_fusioncutter"},
+    command = "327thcombatdriver",
+    max = 0,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "327th Star Corps",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(400)
+        ply:SetHealth(400)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_327TDEVISS = DarkRP.createJob("327th K-Company Deviss", {
+    color = Color(252, 255, 0, 255),
+    model = {"models/solace/327th/deviss/deviss.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
     weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17"},
     command = "327thdeviss",
@@ -656,12 +520,12 @@ TEAM_104THCMD = DarkRP.createJob("104th Commander Wolffe", {
     end
 })
 
-TEAM_104THOFF = DarkRP.createJob("104th Officer ", {
+TEAM_104THHVY = DarkRP.createJob("104th Heavy Trooper", {
     color = Color(143, 143, 143, 255),
-    model = {"models/sample/104th/lowofficer/officer.mdl"},
+    model = {"models/sample/104thln/heavy/heavy.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17","rw_sw_bino_dark"},
-    command = "104thoff",
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17","rw_sw_bino_dark", "alydus_fortificationbuildertablet", "rw_sw_z6"},
+    command = "104thhvy",
     max = 0,
     salary = 100,
     admin = 0,
@@ -670,18 +534,18 @@ TEAM_104THOFF = DarkRP.createJob("104th Officer ", {
     candemote = false,
     category = "104th Battalion",
     PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
+        ply:SetMaxHealth(500)
+        ply:SetHealth(500)
         ply:SetArmor(250)
     end
 })
 
-TEAM_104THNCO = DarkRP.createJob("104th NCO", {
+TEAM_104THARF = DarkRP.createJob("104th ARF Trooper", {
     color = Color(143, 143, 143, 255),
-    model = {"models/sample/104th/sgt/sgt.mdl"},
+    model = {"models/sample/104thln/arf/arf.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17","rw_sw_bino_dark"},
-    command = "104thnco",
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17","rw_sw_bino_dark", "rw_sw_dc15x", "realistic_hook"},
+    command = "104tharf",
     max = 0,
     salary = 100,
     admin = 0,
@@ -816,13 +680,33 @@ TEAM_104THPILOT = DarkRP.createJob("104th Pilot", {
     end
 })
 
+TEAM_104THCD = DarkRP.createJob("104th Combat Driver", {
+    color = Color(143, 143, 143, 255),
+    model = {"models/sample/104thln/mortar/mortar.mdl"},
+    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17","rw_sw_bino_dark", "alydus_fusioncutter"},
+    command = "104thcd",
+    max = 0,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "104th Battalion",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(400)
+        ply:SetHealth(400)
+        ply:SetArmor(250)
+    end
+})
+
 ---41st Elite Corps
 
 TEAM_41STCMD = DarkRP.createJob("41st Commander Gree", {
     color = Color(66, 120, 44, 255),
     model = {"models/41st/gree/gree.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dual_dc17", "rw_sw_bino_dark", "rw_sw_nt242c"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dual_dc17", "rw_sw_dc15x", "rw_sw_bino_dark", "realistic_hook"},
     command = "41stcmd",
     max = 1,
     salary = 100,
@@ -838,12 +722,12 @@ TEAM_41STCMD = DarkRP.createJob("41st Commander Gree", {
     end
 })
 
-TEAM_41STOFF = DarkRP.createJob("41st Officer", {
+TEAM_41STTAC = DarkRP.createJob("41st GC Tactical Trooper", {
     color = Color(66, 120, 44, 255),
     model = {"models/41st/tactical/tactical.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_bino_dark", "rw_sw_nt242c"},
-    command = "41stoff",
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dual_dc17", "rw_sw_dc15x", "rw_sw_bino_dark", "realistic_hook", "cards_westarm5"},
+    command = "41sttac",
     max = 0,
     salary = 100,
     admin = 0,
@@ -858,13 +742,13 @@ TEAM_41STOFF = DarkRP.createJob("41st Officer", {
     end
 })
 
-TEAM_41STNCO = DarkRP.createJob("41st NCO", {
+TEAM_41STVAN = DarkRP.createJob("41st GC Vanguard ", {
     color = Color(66, 120, 44, 255),
-    model = {"models/41st/gclead/gclead.mdl"},
+    model = {"models/41st/vangaurd/vanguard.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17","rw_sw_bino_dark", "rw_sw_nt242c"},
-    command = "41stnco",
-    max = 0,
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc17", "rw_sw_bino_dark", "realistic_hook", "rw_sw_z6", "alydus_fortificationbuildertablet"},
+    command = "41stvan",
+    max = 3,
     salary = 100,
     admin = 0,
     vote = false,
@@ -882,7 +766,7 @@ TEAM_41STTRP = DarkRP.createJob("41st Trooper", {
     color = Color(66, 120, 44, 255),
     model = {"models/41st/trooper/trooper.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_bino_dark", "rw_sw_nt242c"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_dc15x", "rw_sw_bino_dark", "realistic_hook"},
     command = "41sttrp",
     max = 0,
     salary = 100,
@@ -902,7 +786,7 @@ TEAM_41STMED = DarkRP.createJob("41st Medical Trooper", {
     color = Color(66, 120, 44, 255),
     model = {"models/41st/medic/medic.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "weapon_bactainjector", "rw_sw_nade_bacta", "admin_defib", "rw_sw_bino_dark", "rw_sw_nt242c"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "weapon_bactainjector", "rw_sw_nade_bacta", "admin_defib", "rw_sw_dc15x", "rw_sw_bino_dark", "realistic_hook"},
     command = "41stmed",
     max = 0,
     salary = 100,
@@ -922,7 +806,7 @@ TEAM_41STHVY = DarkRP.createJob("41st Heavy Trooper", {
     color = Color(66, 120, 44, 255),
     model = {"models/41st/heavy/heavy.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_z6", "alydus_fortificationbuildertablet", "rw_sw_bino_dark"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_z6", "alydus_fortificationbuildertablet", "rw_sw_dc15x", "rw_sw_bino_dark", "realistic_hook"},
     command = "41sthvy",
     max = 0,
     salary = 100,
@@ -942,7 +826,7 @@ TEAM_41STARF = DarkRP.createJob("41st ARF Trooper", {
     color = Color(66, 120, 44, 255),
     model = {"models/41st/sniper/sniper.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_dc15x", "rw_sw_bino_dark", "rw_sw_dc15x"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_dc15x", "rw_sw_bino_dark", "realistic_hook"},
     command = "41starf",
     max = 0,
     salary = 100,
@@ -962,7 +846,7 @@ TEAM_41STARC = DarkRP.createJob("41st ARC Trooper", {
     color = Color(66, 120, 44, 255),
     model = {"models/41st/arc/arc.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_westarm5", "rw_sw_bino_dark", "rw_sw_nt242c"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dual_dc17", "rw_sw_westarm5", "rw_sw_dc15x", "rw_sw_bino_dark", "realistic_hook"},
     command = "41starc",
     max = 0,
     salary = 100,
@@ -982,8 +866,28 @@ TEAM_41STCOOKER = DarkRP.createJob("41st Cooker", {
     color = Color(66, 120, 44, 255),
     model = {"models/41st/cooker/cooker.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_bino_dark", "rw_sw_nt242c"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dc17", "rw_sw_dc15x", "rw_sw_bino_dark", "realistic_hook"},
     command = "41stcooker",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "41st Elite Corps",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(400)
+        ply:SetHealth(400)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_41STBUZZ = DarkRP.createJob("41st Buzz", {
+    color = Color(66, 120, 44, 255),
+    model = {"models/41st/gclead/gclead.mdl"},
+    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
+    weapons = {"rw_sw_dc15s", "rw_sw_dc17", "rw_sw_bino_dark", "realistic_hook", "rw_sw_z6"},
+    command = "41stbuzz",
     max = 1,
     salary = 100,
     admin = 0,
@@ -1000,11 +904,11 @@ TEAM_41STCOOKER = DarkRP.createJob("41st Cooker", {
 
 ---Shock
 
-TEAM_SHOCKCMD = DarkRP.createJob("Shock Commander Fox", {
+TEAM_SHOCKCMD = DarkRP.createJob("Shock Commander Thorn", {
     color = Color(255, 0, 0, 255),
-    model = {"models/cg/fox/fox.mdl"},
+    model = {"models/cg/ln/thorn/thorn.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dual_dc17", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dual_dc17", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "deployable_shield", "rw_sw_z6"},
     command = "shockcmd",
     max = 1,
     salary = 100,
@@ -1021,13 +925,13 @@ TEAM_SHOCKCMD = DarkRP.createJob("Shock Commander Fox", {
     end
 })
 
-TEAM_SHOCKOFF = DarkRP.createJob("Shock Officer", {
+TEAM_SHOCKTHIRE = DarkRP.createJob("Shock Trooper Thire", {
     color = Color(255, 0, 0, 255),
-    model = {"models/cg/lowofficer/officer.mdl"},
+    model = {"models/cg/ln/thire/thire.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dc17"},
-    command = "shockoff",
-    max = 0,
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dual_dc17", "deployable_shield"},
+    command = "shockthire",
+    max = 1,
     salary = 100,
     admin = 0,
     vote = false,
@@ -1042,12 +946,12 @@ TEAM_SHOCKOFF = DarkRP.createJob("Shock Officer", {
     end
 })
 
-TEAM_SHOCKNCO = DarkRP.createJob("Shock NCO", {
+TEAM_SHOCKHVY = DarkRP.createJob("Shock Heavy Trooper", {
     color = Color(255, 0, 0, 255),
-    model = {"models/cg/sgt/sgt.mdl"},
+    model = {"models/cg/ln/heavy/heavy.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dc17"},
-    command = "shocknco",
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dc17", "deployable_shield", "alydus_fortificationbuildertablet", "rw_sw_z6"},
+    command = "shockhvy",
     max = 0,
     salary = 100,
     admin = 0,
@@ -1056,8 +960,30 @@ TEAM_SHOCKNCO = DarkRP.createJob("Shock NCO", {
     candemote = false,
     category = "Shock",
     PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
+        ply:SetMaxHealth(500)
+        ply:SetHealth(500)
+        ply:SetArmor(250)
+	ply:SetRunSpeed(270)
+    end
+})
+
+
+TEAM_SHOCKRIOT = DarkRP.createJob("Shock Riot Trooper", {
+    color = Color(255, 0, 0, 255),
+    model = {"models/cg/ln/heavy/heavy.mdl"},
+    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dual_dc17ext", "deployable_shield", "alydus_fortificationbuildertablet", "rw_sw_valken38x"},
+    command = "shockriot",
+    max = 0,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Shock",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(500)
+        ply:SetHealth(500)
         ply:SetArmor(250)
 	ply:SetRunSpeed(270)
     end
@@ -1067,8 +993,29 @@ TEAM_SHOCKTRP = DarkRP.createJob("Shock Trooper", {
     color = Color(255, 0, 0, 255),
     model = {"models/cg/trooper/trooper.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dc17"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dc17", "deployable_shield"},
     command = "shocktrooper",
+    max = 0,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Shock",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(400)
+        ply:SetHealth(400)
+        ply:SetArmor(250)
+	ply:SetRunSpeed(270)
+    end
+})
+
+TEAM_SHOCKPLT = DarkRP.createJob("Shock Piloting Trooper", {
+    color = Color(255, 0, 0, 255),
+    model = {"models/cg/ln/pilot/pilot.mdl"},
+    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dc17", "deployable_shield"},
+    command = "shockplt",
     max = 0,
     salary = 100,
     admin = 0,
@@ -1088,7 +1035,7 @@ TEAM_SHOCKMEDTRP = DarkRP.createJob("Shock Medical Trooper", {
     color = Color(255, 0, 0, 255),
     model = {"models/cg/medic/medic.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dc17", "weapon_bactainjector", "rw_sw_nade_bacta"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dc17", "weapon_bactainjector", "rw_sw_nade_bacta", "admin_defib", "deployable_shield"},
     command = "shockmedtrooper",
     max = 0,
     salary = 100,
@@ -1109,7 +1056,7 @@ TEAM_SHOCKARC = DarkRP.createJob("Shock ARC Trooper", {
     color = Color(255, 0, 0, 255),
     model = {"models/cg/arc/arc.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dc17", "rw_sw_westarm5"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dual_dc17", "rw_sw_westarm5", "deployable_shield"},
     command = "shockarctrooper",
     max = 0,
     salary = 100,
@@ -1128,9 +1075,9 @@ TEAM_SHOCKARC = DarkRP.createJob("Shock ARC Trooper", {
 
 TEAM_SHOCKHOUND = DarkRP.createJob("Shock K9 Hound", {
     color = Color(255, 0, 0, 255),
-    model = {"models/cg/hound/hound.mdl"},
+    model = {"models/cg/ln/hound/hound.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dc17", "rw_sw_bino_dark"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dc17", "rw_sw_bino_dark", "realistic_hook", "deployable_shield"},
     command = "shockk9hound",
     max = 1,
     salary = 100,
@@ -1147,185 +1094,24 @@ TEAM_SHOCKHOUND = DarkRP.createJob("Shock K9 Hound", {
     end
 })
 
----21st Nova Corps
-
-TEAM_21STCMD = DarkRP.createJob("21st Commander Bacara", {
-    color = Color(161, 57, 217, 255),
-    model = {"models/herm_models/21st/commander/commander.mdl"},
+TEAM_SHOCKARF = DarkRP.createJob("Shock ARF Trooper", {
+    color = Color(255, 0, 0, 255),
+    model = {"models/cg/ln/tracker/tracker.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dual_dc17"},
-    command = "21stcmd",
-    max = 1,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "Galactic Marines",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_21STOFF = DarkRP.createJob("21st Officer", {
-    color = Color(161, 57, 217, 255),
-    model = {"models/herm_models/21st/officer/officer.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dc17"},
-    command = "21stoff",
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "salute_swep", "weapon_empty_hands", "bkeycard", "rw_sw_dc17", "rw_sw_bino_dark", "realistic_hook", "deployable_shield", "rw_sw_dc15x", "realistic_hook"},
+    command = "shockarf",
     max = 0,
     salary = 100,
     admin = 0,
     vote = false,
     hasLicense = false,
     candemote = false,
-    category = "Galactic Marines",
+    category = "Shock",
     PlayerSpawn = function(ply)
         ply:SetMaxHealth(400)
         ply:SetHealth(400)
         ply:SetArmor(250)
-    end
-})
-
-TEAM_21STNCO = DarkRP.createJob("21st NCO", {
-    color = Color(161, 57, 217, 255),
-    model = {"models/herm_models/21st/sergeant/sergeant.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dc17"},
-    command = "21stnco",
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "Galactic Marines",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_21STTRP = DarkRP.createJob("21st Trooper", {
-    color = Color(161, 57, 217, 255),
-    model = {"models/herm_models/21st/trooper/trooper.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dc17"},
-    command = "21sttrp",
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "Galactic Marines",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_21STMED = DarkRP.createJob("21st Medical Trooper", {
-    color = Color(161, 57, 217, 255),
-    model = {"models/herm_models/21st/medic/medic.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dc17", "weapon_bactainjector", "rw_sw_nade_bacta", "admin_defib"},
-    command = "21stmed","
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "Galactic Marines",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_21STHVY = DarkRP.createJob("21st Heavy Trooper", {
-    color = Color(161, 57, 217, 255),
-    model = {"models/herm_models/21st/heavy/heavy.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dc17", "alydus_fortificationbuildertablet", "rw_sw_z6"},
-    command = "21sthvy",
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "Galactic Marines",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(500)
-        ply:SetHealth(500)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_21STPLT = DarkRP.createJob("21st Piloting Trooper", {
-    color = Color(161, 57, 217, 255),
-    model = {"models/herm_models/21st/pilot/pilot.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dc17", "alydus_fusioncutter"},
-    command = "21stplt",
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "Galactic Marines",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_21STARF = DarkRP.createJob("21st ARF Trooper", {
-    color = Color(161, 57, 217, 255),
-    model = {"models/herm_models/21st/arf/arf.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dc17", "rw_sw_dc15x", "rw_sw_bino_dark", "rw_sw_dc15x"},
-    command = "21starf",
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "Galactic Marines",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
-    end
-})
-
-TEAM_21STARC = DarkRP.createJob("21st ARC Trooper", {
-    color = Color(161, 57, 217, 255),
-    model = {"models/herm_models/21st/arc/arc.mdl"},
-    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dc17"},
-    command = "21starc",
-    max = 0,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "Galactic Marines",
-    PlayerSpawn = function(ply)
-        ply:SetMaxHealth(400)
-        ply:SetHealth(400)
-        ply:SetArmor(250)
+	ply:SetRunSpeed(270)
     end
 })
 
@@ -1333,9 +1119,9 @@ TEAM_21STARC = DarkRP.createJob("21st ARC Trooper", {
 
 TEAM_RANCORCMD = DarkRP.createJob("Rancor Commander Blitz", {
     color = Color(161, 47, 47, 255),
-    model = {"models/player/cgirancorblitz/cgirancorblitz.mdl"},
+    model = {"models/sample/arc/blitz/blitz.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dual_dc17"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dual_dc17ext", "realistic_hook"},
     command = "rancorblitz",
     max = 1,
     salary = 100,
@@ -1353,9 +1139,9 @@ TEAM_RANCORCMD = DarkRP.createJob("Rancor Commander Blitz", {
 
 TEAM_RANCOROFF = DarkRP.createJob("Rancor Officer Hammer", {
     color = Color(161, 47, 47, 255),
-    model = {"models/player/cgirancorhammer/cgirancorhammer.mdl"},
+    model = {"models/sample/arc/hammer/hammer.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dual_dc17"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dual_dc17ext", "realistic_hook"},
     command = "rancorhavoc",
     max = 1,
     salary = 100,
@@ -1375,7 +1161,7 @@ TEAM_RANCORTRP = DarkRP.createJob("Rancor Trooper", {
     color = Color(161, 47, 47, 255),
     model = {"models/kylejwest/synergyroleplay/rancor/sr3drancorarctrooper/sr3drancorarctrooper.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dc17"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dual_dc17", "realistic_hook"},
     command = "rancortrp",
     max = 0,
     salary = 100,
@@ -1395,7 +1181,7 @@ TEAM_RANCORARF = DarkRP.createJob("Rancor ARF Trooper", {
     color = Color(161, 47, 47, 255),
     model = {"models/kylejwest/synergyroleplay/rancor/sr3drancorarftrooper/sr3drancorarftrooper.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dc17", "rw_sw_rps6", "rw_sw_bino_dark"},
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_westarm5", "rw_sw_dual_dc17", "rw_sw_dc15x", "rw_sw_bino_dark", "realistic_hook"},
     command = "rancorarf",
     max = 0,
     salary = 100,
@@ -1417,7 +1203,7 @@ TEAM_DELTABOSS = DarkRP.createJob("Delta Squad Boss", {
     color = Color(186, 171, 107, 255),
     model = {"models/player/sample/rc/delta/boss.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"cc2018_dc17m", "cc2018_dual_dc15p", "cc2018_dual_dc15p"},
+    weapons = {"cc2018_dc17m", "cc2018_dual_dc15p", "cc2018_dual_dc15p", "realistic_hook"},
     command = "deltaboss",
     max = 1,
     salary = 100,
@@ -1437,7 +1223,7 @@ TEAM_DELTAFIXER = DarkRP.createJob("Delta Squad Fixer", {
     color = Color(186, 171, 107, 255),
     model = {"models/player/sample/rc/delta/fixer.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"cc2018_dc17m", "cc2018_dc15p", "alydus_fortificationbuildertablet", "alydus_fusioncutter"},
+    weapons = {"cc2018_dc17m", "cc2018_dc15p", "alydus_fortificationbuildertablet", "alydus_fusioncutter", "realistic_hook"},
     command = "deltafixer",
     max = 1,
     salary = 100,
@@ -1457,7 +1243,7 @@ TEAM_DELTASCORCH = DarkRP.createJob("Delta Squad Scorch", {
     color = Color(186, 171, 107, 255),
     model = {"models/player/sample/rc/delta/scorch.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"cc2018_dc17m", "cc2018_dc15p", "cc2018_dc17msg", "cc2018_dc17maa"},
+    weapons = {"cc2018_dc17m", "cc2018_dc15p", "cc2018_dc17msg", "cc2018_dc17maa", "realistic_hook"},
     command = "deltascorch",
     max = 1,
     salary = 100,
@@ -1477,7 +1263,7 @@ TEAM_DELTASEV = DarkRP.createJob("Delta Squad Sev", {
     color = Color(186, 171, 107, 255),
     model = {"models/player/sample/rc/delta/sev.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
-    weapons = {"cc2018_dc17m", "cc2018_dc15p", "cc2018_dc17ms", "rw_sw_bino_dark", "weapon_bactainjector","rw_sw_nade_bacta", "admin_defib"},
+    weapons = {"cc2018_dc17m", "cc2018_dc15p", "cc2018_dc17ms", "rw_sw_bino_dark", "weapon_bactainjector","rw_sw_nade_bacta", "realistic_hook"},
     command = "deltasev",
     max = 1,
     salary = 100,
@@ -1493,14 +1279,97 @@ TEAM_DELTASEV = DarkRP.createJob("Delta Squad Sev", {
     end
 })
 
+--- OMEGA SQUAD
+
+TEAM_OMEGANINER = DarkRP.createJob("Omega Squad Niner", {
+    color = Color(186, 171, 107, 255),
+    model = {"models/sample/niner/niner.mdl"},
+    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
+    weapons = {"cc2018_dc17m", "cc2018_dc15p", "cc2018_dc17ms", "rw_sw_bino_dark", "realistic_hook"},
+    command = "omeganiner",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Omega Squad",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(500)
+        ply:SetHealth(500)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_OMEGADARMAN = DarkRP.createJob("Omega Squad Darman", {
+    color = Color(186, 171, 107, 255),
+    model = {"models/sample/darman/darman.mdl"},
+    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
+    weapons = {"cc2018_dc17m", "cc2018_dc15p", "rw_sw_bino_dark", "realistic_hook", "weapon_swrc_det", "cc2018_dc17maa"},
+    command = "omegadarman",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Omega Squad",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(500)
+        ply:SetHealth(500)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_OMEGAATIN = DarkRP.createJob("Omega Squad Atin", {
+    color = Color(186, 171, 107, 255),
+    model = {"models/sample/atin/atin.mdl"},
+    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
+    weapons = {"cc2018_dc17m", "cc2018_dc15p", "realistic_hook", "alydus_fusioncutter", "alydus_fortificationbuildertablet"},
+    command = "omegaatin",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Omega Squad",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(500)
+        ply:SetHealth(500)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_OMEGAFI = DarkRP.createJob("Omega Squad Fi", {
+    color = Color(186, 171, 107, 255),
+    model = {"models/sample/fi/fi.mdl"},
+    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
+    weapons = {"cc2018_dc17m", "cc2018_dc15p", "cc2018_dc17ms", "realistic_hook", "rw_sw_nade_bacta", "weapon_bactainjector", "admin_defib"},
+    command = "omegafi",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Omega Squad",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(500)
+        ply:SetHealth(500)
+        ply:SetArmor(250)
+    end
+})
+
+
 --- NAVAL / BASE OPS
 
-TEAM_NAVALADM = DarkRP.createJob("Naval Admiral", {
+TEAM_NAVALADM = DarkRP.createJob("Naval Admiral Yularen", {
     color = Color(156, 235, 235, 255),
-    model = {"models/navy/knu/white/navy_white.mdl"},
+    model = {"models/player/wullf/wullf.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
     weapons = {"rw_sw_dc15s", "rw_sw_dc17"},
-    command = "models/player/clone/oldyularen.mdl",
+    command = "navaladmiral",
     max = 1,
     salary = 100,
     admin = 0,
@@ -1521,7 +1390,7 @@ TEAM_NAVALVICEADM = DarkRP.createJob("Naval Vice Admiral", {
     model = {"models/player/clone/genericadmiral.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
     weapons = {"rw_sw_dc15s", "rw_sw_dc17"},
-    command = "models/player/clone/genericadmiral.mdl",
+    command = "navalviceadmiral",
     max = 0,
     salary = 100,
     admin = 0,
@@ -1558,7 +1427,7 @@ TEAM_NAVALRADM = DarkRP.createJob("Naval Rear Admiral", {
 
 TEAM_NAVALOFF = DarkRP.createJob("Naval Officer", {
     color = Color(156, 235, 235, 255),
-    model = {"models/player/clone/ifngnaval.mdl"},
+    model = {"models/player/clone/ifnbnaval.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
     weapons = {"rw_sw_dc15s", "rw_sw_dc17"},
     command = "navalofficer",
@@ -1578,7 +1447,7 @@ TEAM_NAVALOFF = DarkRP.createJob("Naval Officer", {
 
 TEAM_NAVALCRW = DarkRP.createJob("Naval Crewman", {
     color = Color(156, 235, 235, 255),
-    model = {"models/player/clone/ifnbnaval.mdl"},
+    model = {"models/player/clone/ifngnaval.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
     weapons = {"rw_sw_dc15s", "rw_sw_dc17"},
     command = "navalcrw",
@@ -1598,7 +1467,7 @@ TEAM_NAVALCRW = DarkRP.createJob("Naval Crewman", {
 
 TEAM_NAVALENG = DarkRP.createJob("Naval Engineer", {
     color = Color(156, 235, 235, 255),
-    model = {"models/player/clone/ifnbnaval.mdl", "models/player/clone engineer/ccgi engineer.mdl"},
+    model = {"models/player/clone engineer/ccgi engineer.mdl"},
     description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
     weapons = {"rw_sw_dc15s", "rw_sw_dc17", "alydus_fortificationbuildertablet", "alydus_fusioncutter"},
     command = "navaleng",
@@ -1617,6 +1486,240 @@ TEAM_NAVALENG = DarkRP.createJob("Naval Engineer", {
 })
 
 ---JEDI 
+
+TEAM_YODA = DarkRP.createJob("Grand Master Of The Order Yoda", {
+    color = Color(125, 222, 216, 255),
+    model = {"models/tfa/comm/gg/pm_sw_yodanojig.mdl"},
+    description = [[You are apart of the Noble Jedi Order. Maintain Peace, Justice, and Solitude.]],
+    weapons = {"weapon_lightsaber_wos", "wos_inventory"},
+    command = "yoda",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Jedi",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(5000)
+        ply:SetHealth(5000)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_MACEWINDU = DarkRP.createJob("Master Of The Order Windu", {
+    color = Color(125, 222, 216, 255),
+    model = {"models/player/mace/mace.mdl"},
+    description = [[You are apart of the Noble Jedi Order. Maintain Peace, Justice, and Solitude.]],
+    weapons = {"weapon_lightsaber_wos", "wos_inventory"},
+    command = "windu",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Jedi",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(5000)
+        ply:SetHealth(5000)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_OBIWAN = DarkRP.createJob("Jedi Master Obi-Wan Kenobi", {
+    color = Color(125, 222, 216, 255),
+    model = {"models/player/generalkenobi/cgikenobi.mdl"},
+    description = [[You are apart of the Noble Jedi Order. Maintain Peace, Justice, and Solitude.]],
+    weapons = {"weapon_lightsaber_wos", "wos_inventory"},
+    command = "kenobi",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Jedi",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(4000)
+        ply:SetHealth(4000)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_PLOKOON = DarkRP.createJob("Jedi Master Plo Koon", {
+    color = Color(125, 222, 216, 255),
+    model = {"models/player/plokoon/plokoon.mdl"},
+    description = [[You are apart of the Noble Jedi Order. Maintain Peace, Justice, and Solitude.]],
+    weapons = {"weapon_lightsaber_wos", "wos_inventory"},
+    command = "plokoon",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Jedi",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(4000)
+        ply:SetHealth(4000)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_SHAAKTI = DarkRP.createJob("Jedi Master Shaak TI", {
+    color = Color(125, 222, 216, 255),
+    model = {"models/synergy/cblake/pm_shaakti.mdl"},
+    description = [[You are apart of the Noble Jedi Order. Maintain Peace, Justice, and Solitude.]],
+    weapons = {"weapon_lightsaber_wos", "wos_inventory"},
+    command = "shaakti",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Jedi",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(4000)
+        ply:SetHealth(4000)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_ANAKIN = DarkRP.createJob("Jedi Knight Anakin Skywalker", {
+    color = Color(125, 222, 216, 255),
+    model = {"models/tfa/comm/pm_sw_anakin_skywalker.mdl"},
+    description = [[You are apart of the Noble Jedi Order. Maintain Peace, Justice, and Solitude.]],
+    weapons = {"weapon_lightsaber_wos", "wos_inventory"},
+    command = "skywalker",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Jedi",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(4000)
+        ply:SetHealth(4000)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_TEMPLEGUARD = DarkRP.createJob("Jedi Temple Guard", {
+    color = Color(125, 222, 216, 255),
+    model = {"models/jazzmcfly/jka/jtg/jtg.mdl"},
+    description = [[You are apart of the Noble Jedi Order. Maintain Peace, Justice, and Solitude.]],
+    weapons = {"weapon_lightsaber_wos", "wos_inventory"},
+    command = "templeguard",
+    max = 0,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Jedi",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(3500)
+        ply:SetHealth(3500)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_YOUNGLING = DarkRP.createJob("Jedi Youngling", {
+    color = Color(125, 222, 216, 255),
+    model = {
+        "models/jazzmcfly/jka/younglings/jka_young_male.mdl",
+        "models/jazzmcfly/jka/younglings/jka_young_shak.mdl",
+        "models/jazzmcfly/jka/younglings/jka_young_female.mdl",
+        "models/jazzmcfly/jka/younglings/jka_young_anikan.mdl"
+    },
+    description = [[You are apart of the Noble Jedi Order. Maintain Peace, Justice, and Solitude.]],
+    weapons = {"weapon_lightsaber_personal", "wos_inventory"},
+    command = "youngling",
+    max = 0,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Jedi",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(500)
+        ply:SetHealth(500)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_MUNDI = DarkRP.createJob("Jedi Master Ki Adi Mundi", {
+    color = Color(125, 222, 216, 255),
+    model = {"models/player/stealthyzoroark/mundi.mdl"},
+    description = [[You are apart of the Noble Jedi Order. Maintain Peace, Justice, and Solitude.]],
+    weapons = {"weapon_lightsaber_wos", "wos_inventory"},
+    command = "mundi",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Jedi",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(4000)
+        ply:SetHealth(4000)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_KNIGHT = DarkRP.createJob("Jedi Knight", {
+    color = Color(125, 222, 216, 255),
+    model = {
+        "models/player/zhidus/jedi/human/human.mdl",
+        "models/player/zhidus/jedi/nautolan/nautolan.mdl",
+        "models/player/zhidus/jedi/pantoran/pantoran.mdl",
+        "models/player/zhidus/jedi/togruta/togruta.mdl",
+        "models/player/zhidus/jedi/rodian/rodian.mdl",
+        "models/player/zhidus/jedi/twilek/twilek.mdl",
+        "models/player/zhidus/jedi/zabrak/zabrak.mdl"
+    },
+    description = [[You are apart of the Noble Jedi Order. Maintain Peace, Justice, and Solitude.]],
+    weapons = {"wos_inventory", "weapon_lightsaber_personal"},
+    command = "jediknight",
+    max = 0,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Jedi",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(2500)
+        ply:SetHealth(2500)
+        ply:SetArmor(250)
+    end
+})
+
+TEAM_REECEJEDI = DarkRP.createJob("Jedi Master Reece", {
+    color = Color(125, 222, 216, 255),
+    model = {"models/dw_brute/pm_deathwatch_maul_brute.mdl"},
+    description = [[This is a custom job for Reece. A Mando Jedi. All lore can be found in the lore chat in discord! ]],
+    weapons = {"wos_inventory", "weapon_lightsaber_wos"},
+    command = "reecejedi",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Jedi",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(4000)
+        ply:SetHealth(4000)
+        ply:SetArmor(250)
+    end
+})
+
 
 ---EVENT JOBS
 
