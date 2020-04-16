@@ -14,7 +14,6 @@ For examples and explanation please visit this wiki page:
 http://wiki.darkrp.com/index.php/DarkRP:CustomJobFields
 
 Add your custom jobs under the following line:
-asd
 ---------------------------------------------------------------------------]]
 
 -- Basic Jobs
