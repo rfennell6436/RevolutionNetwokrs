@@ -1485,6 +1485,92 @@ TEAM_NAVALENG = DarkRP.createJob("Naval Engineer", {
     end
 })
 
+-- 5th Fleet
+
+TEAM_FFHCOM = DarkRP.createJob("Fith Fleet High Command", {
+    color = Color(0, 255, 0, 255),
+    model = {"models/joshbotts/5th_cc/5th_cc.mdl"},
+    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dual_dc17", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "deployable_shield", "rw_sw_z6"},
+    command = "ffhc",
+    max = 3,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Naval / Base Ops",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(400)
+        ply:SetHealth(400)
+        ply:SetArmor(250)
+	    ply:SetRunSpeed(270)
+    end
+})
+
+TEAM_FFOFF = DarkRP.createJob("Fith Fleet Officer", {
+    color = Color(0, 255, 0, 255),
+    model = {"models/joshbotts/5th_xo/5th_xo.mdl"},
+    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_dual_dc17", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "deployable_shield", "rw_sw_z6"},
+    command = "ffoff",
+    max = 0,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Naval / Base Ops",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(400)
+        ply:SetHealth(400)
+        ply:SetArmor(250)
+	    ply:SetRunSpeed(270)
+    end
+})
+
+TEAM_FFNCO = DarkRP.createJob("Fith Fleet NCO", {
+    color = Color(0, 255, 0, 255),
+    model = {"models/joshbotts/5th_sgt/5th_sgt.mdl"},
+    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "deployable_shield", "rw_sw_z6"},
+    command = "ffnco",
+    max = 0,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Naval / Base Ops",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(400)
+        ply:SetHealth(400)
+        ply:SetArmor(250)
+	    ply:SetRunSpeed(270)
+    end
+})
+
+TEAM_FFNENLISTED = DarkRP.createJob("Fith Fleet Enlisted", {
+    color = Color(0, 255, 0, 255),
+    model = {"models/joshbotts/5th_trp/5th_trp.mdl"},
+    description = [[You're are a Clone of the Galactic Republic. Use your equipped weapons to fight through the CIS and take the Republic to victory!]],
+    weapons = {"rw_sw_dc15a_o", "rw_sw_dc15s", "rw_sw_nade_stun", "weapon_policebaton", "weapon_cuff_elastic", "deployable_shield", "rw_sw_z6"},
+    command = "ffenlisted",
+    max = 0,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Naval / Base Ops",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(400)
+        ply:SetHealth(400)
+        ply:SetArmor(250)
+	    ply:SetRunSpeed(270)
+    end
+})
+
 ---JEDI 
 
 TEAM_YODA = DarkRP.createJob("Grand Master Of The Order Yoda", {
