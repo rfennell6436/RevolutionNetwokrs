@@ -60,8 +60,8 @@ TEAM_CLONETROOPER = DarkRP.createJob("Clone Trooper", {
     sortOrder = 1,
 
     PlayerSpawn = function(ply)
-        ply:SetMaxHealth(250)
-        ply:SetHealth(250)
+        ply:SetMaxHealth(300)
+        ply:SetHealth(300)
         ply:SetArmor(100)
     end
 })
