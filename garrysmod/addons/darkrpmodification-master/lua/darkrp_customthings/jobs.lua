@@ -1633,6 +1633,28 @@ TEAM_OBIWAN = DarkRP.createJob("Jedi Master Obi-Wan Kenobi", {
     end
 })
 
+TEAM_NAME = DarkRP.createJob("Kit-Fisto", {
+    color = Color(125, 222, 216, 255),
+    model = {
+        "models/tfa/comm/gg/pm_sw_fisto.mdl"
+    },
+    description = [[Jedi Kit Fisto]],
+    weapons = {"wos_inventory", "weapon_lightsaber_personal"},
+    command = "fisto",
+    max = 0,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Jedi",
+    PlayerSpawn = function(ply)
+        ply:SetMaxHealth(4000)
+        ply:SetHealth(4000)
+        ply:SetArmor(250)
+    end
+})
+
 TEAM_PLOKOON = DarkRP.createJob("Jedi Master Plo Koon", {
     color = Color(125, 222, 216, 255),
     model = {"models/player/plokoon/plokoon.mdl"},
